@@ -18,7 +18,7 @@ _The first DeFi wallet that combines power, security and ease of use, while also
 - Submit findings [using the C4 form](https://code423n4.com/2021-10-Ambire-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts October 15, 2021 00:00 UTC
-- Ends October 17, 2021 23:59 UTC
+- Ends October 18, 2021 23:59 UTC
 
 # Hello Wardens 👋
 
