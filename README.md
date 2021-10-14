@@ -12,7 +12,7 @@ _The first DeFi wallet that combines power, security and ease of use, while also
 * [Ambire Discord](https://discord.gg/nMBGJsb)
 
 # Ambire contest details
-- $23,750 USDC main award pot
+- $33,750 USDC main award pot
 - $1,250 USDC gas optimization award pot
 - Join the [C4 Discord](https://discord.gg/EY5dvm3evD) to register
 - Submit findings [using the C4 form](https://code423n4.com/2021-10-Ambire-contest/submit)
