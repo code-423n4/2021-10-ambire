@@ -7,14 +7,14 @@ _The first DeFi wallet that combines power, security and ease of use, while also
 # Useful links
 
 * [ambire.com](https://www.ambire.com)
-* [Twitter](https://twitter.com/AmbireWallet)
+* [Ambire Wallet Twitter](https://twitter.com/AmbireWallet)
 * [GitHub](https://github.com/AmbireTech/) and [the Solidity repo](https://github.com/AmbireTech/adex-protocol-eth/tree/identity-v5.2)
-* [Discord](https://discord.gg/nMBGJsb)
+* [Ambire Discord](https://discord.gg/nMBGJsb)
 
 # Ambire contest details
 - $23,750 USDC main award pot
 - $1,250 USDC gas optimization award pot
-- Join [C4 Discord](https://discord.gg/EY5dvm3evD) to register
+- Join the [C4 Discord](https://discord.gg/EY5dvm3evD) to register
 - Submit findings [using the C4 form](https://code423n4.com/2021-10-Ambire-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts October 15, 2021 00:00 UTC
@@ -24,7 +24,7 @@ _The first DeFi wallet that combines power, security and ease of use, while also
 
 **We are looking forward to you diving into our code!**
 
-Feel free to ask us anything you want, no matter if it's a minor nitpick or a severe issue. We remain available around the clock in the Code4rena Discord, and don't hestitate to tag @Ivo#8114
+Feel free to ask us anything you want, no matter if it's a minor nitpick or a severe issue. We remain available around the clock in the Code4rena Discord, and don't hestitate to tag @Ivo#8114.
 
 Good luck and enjoy hunting! 🐛🚫
 
@@ -46,7 +46,7 @@ The addresses that control an account (privileges) can be EOAs but they can also
 
 To allow more sophisticated authentication schemes without upgradability, we use a very simple relationship: a periphery contract that only deals with the specific authentication scheme can be added to `privileges`. For example, if a user wants to convert their account to a multisig, they can remove all other privileges and only authorize a single one: a multisig manager contract, that will verify N/M signatures and call `Identity(account).executeBySender` upon successful verification. This also works for EIP 1271 signatures since `Identity.isValidSignature` uses `SignatureValidatorV2`, which supports EIP 1271 itself, so it will propagate the call down to the multisig manager contract.
 
-This very system is used by `QuickAccManager`, which is a simple 2/2 multisig, that also allows 1/2 transactions but with a timelock. This is used to allow for simple email/password login that can be upgraded by either backing up the second key or by moving to a hardware wallet. For more info on this authentication scheme please read the [security model Gist](https://gist.github.com/Ivshti/fe86f13c3adff3404a1f5ce1e364304c).
+This very system is used by `QuickAccManager`, which is a simple 2/2 multisig that also allows 1/2 transactions but with a timelock. This is used to allow for simple email/password login that can be upgraded by either backing up the second key or by moving to a hardware wallet. For more info on this authentication scheme please read the [security model Gist](https://gist.github.com/Ivshti/fe86f13c3adff3404a1f5ce1e364304c).
 
 There are two ways for a user bundle to get executed:
 * Directly, when a user's EOA pays for gas
@@ -82,7 +82,7 @@ The core of the Ambire smart wallet. Each user is a minimal proxy with this cont
 * `execute`: executes a signed user bundle
 * `executeBySender`: executes a bundle as long as `msg.sender` is authorized
 
-There's a few methods that can only be called by the Identity itself, which means the only way to call them is through a call through `execute`/`executeBySender`, ensuring it's authorized. Those methods are `setAddrPrivilege`, `tipMiner` and `tryCatch`.
+There are a few methods that can only be called by the Identity itself, which means the only way to call them is through a call through `execute`/`executeBySender`, ensuring it's authorized. Those methods are `setAddrPrivilege`, `tipMiner` and `tryCatch`.
 
 It's only dependency is an internal one, `SignatureValidatorV2`.
 
@@ -132,4 +132,4 @@ The contracts will be deployed on Ethereum, Polygon, Fantom, Binance Smart Chain
 
 # Final notes
 
-if you're excited about building an easy to use, but powerful smart wallet, feel free to reach out at contactus@ambire.com 🔥 
+If you're excited about building an easy to use but powerful smart wallet, feel free to reach out at contactus@ambire.com 🔥 
